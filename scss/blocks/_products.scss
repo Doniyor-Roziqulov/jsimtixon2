@@ -1,0 +1,18 @@
+.products {
+    padding-top: 63px;
+    padding-bottom: 105px;
+}
+
+.topk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: -40px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: #000;
+}
