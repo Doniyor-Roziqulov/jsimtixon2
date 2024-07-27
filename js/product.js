@@ -3,6 +3,7 @@ const content = document.querySelector(".content");
 const siteHeaderStart = document.querySelector(".header-start");
 const siteHeaderEnd = document.querySelector(".header-end");
 const tops = document.querySelector(".topk");
+const loading = document.querySelector(".loading");
 
 async function fetchSingleData(api) {
     let query = new URLSearchParams(window.location.search);
@@ -12,8 +13,10 @@ async function fetchSingleData(api) {
     response
         .json()
         .then((res) => createContent(res))
-        .catch((err) => console.log(err));
-    // .finally{}
+        .catch((err) => console.log(err))
+    .finally(()=>{
+        loading.style.display = "none"
+    })
 }
 
 fetchSingleData(API__URL);

@@ -195,6 +195,28 @@
     position: relative;
 }
 
+.add__btn {
+    display: none;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--Button, #000);
+    border: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.card__one:hover .add__btn {
+    display: block;
+}
+
 .card__iconbox {
     display: flex;
     flex-direction: column;

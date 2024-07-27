@@ -70,6 +70,7 @@ function createCard(data) {
         card.innerHTML = `
         <div class="card__one">
         <img class="card__img"src=${post.image} alt="Images">
+        <button class="add__btn">Add To Cart</button>
         <div class="card__iconbox">
             <button>
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
