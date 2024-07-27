@@ -4,6 +4,12 @@ const siteHeaderStart = document.querySelector(".header-start");
 const siteHeaderEnd = document.querySelector(".header-end");
 const tops = document.querySelector(".topk");
 const loading = document.querySelector(".loading");
+const navbar = document.querySelector(".navbar");
+const jsBtn = document.querySelector(".js-btn");
+
+jsBtn.addEventListener("click", () => {
+    navbar.classList.toggle("show");
+});
 
 async function fetchSingleData(api) {
     let query = new URLSearchParams(window.location.search);
