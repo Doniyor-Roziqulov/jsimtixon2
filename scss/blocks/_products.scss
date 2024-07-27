@@ -15,4 +15,248 @@
     border-radius: 50%;
     transition: 0.3s;
     background-color: #000;
+    border: 1px solid #fff;
+}
+
+.skeleton {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 60px;
+}
+
+.skeleton__item {
+    width: 270px;
+}
+
+.skeleton__image {
+    width: 100%;
+    height: 250px;
+    background-color: #ddd;
+    border-radius: 14px;
+}
+
+.skeleton__line {
+    width: 80%;
+    height: 30px;
+    background-color: #ddd;
+    margin-top: 11px;
+    border-radius: 8px;
+}
+
+.skeleton__line:nth-child(3) {
+    width: 60%;
+}
+
+.skeleton__anime {
+    background: linear-gradient(90deg, #ddd, #f7f7f7, #ddd);
+    background-size: 200%;
+    animation: skeleton 1s linear 0s infinite;
+}
+
+@keyframes skeleton {
+    to {
+        background-position: 200%;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    margin-bottom: 60px;
+}
+
+.card {
+    width: 270px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+}
+
+.card h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.card__title {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.see__more {
+    display: block;
+    margin: 0 auto;
+    color: var(--Text, #fafafa);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    border-radius: 4px;
+    background: var(--Button2, #db4444);
+    padding: 16px 48px;
+    border: 1px solid #db4444;
+    transition: all 0.3s linear;
+}
+
+.collection {
+    display: flex;
+    // flex-wrap: wrap;
+    overflow-x: scroll;
+    justify-content: center;
+    row-gap: 30px;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.col-item {
+    border-radius: 20px;
+    background-color: var(--Button, #000);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.col-item data {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    border-radius: 20px;
+    background-color: var(--Button, #000);
+    padding: 8px 20px;
+    border: 1px solid #000;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.col-item data:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.col-item:hover {
+    background-color: #fff;
+}
+
+.see__more:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.card__text {
+    color: var(--Secondary-2, #db4444);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    position: relative;
+}
+
+.card__text::after {
+    content: "";
+    width: 100px;
+    height: 20px;
+    background-image: url(../../images/star.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -110px;
+}
+
+.card__one {
+    width: 270px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: var(--Secondary, #f5f5f5);
+    position: relative;
+}
+
+.card__iconbox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}
+
+.card__iconbox button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.card__count {
+    color: var(--Text2, #000);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px; /* 150% */
+    opacity: 0.5;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card__two {
+    display: flex;
+    align-items: center;
+    column-gap: 112px;
+}
+
+.card img {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 742px) {
+    .collection {
+        overflow-x: hidden;
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .collection {
+        column-gap: 40px;
+    }
+}
+
+@media only screen and (min-width: 1210px) {
+    .collection {
+        column-gap: 50px;
+    }
+
+    .col-item data {
+        padding: 8px 50px;
+    }
+
+    .col-item {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: 25px;
+    }
 }
